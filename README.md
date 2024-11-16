@@ -26,4 +26,18 @@ Install the right dependencies
 Use the following command to run the server
 
     python manage.py runserver
- 
+
+It should give you an output like : 
+
+    Watching for file changes with StatReloader
+    Performing system checks...
+
+    System check identified no issues (0 silenced).
+    November 16, 2024 - 01:54:08
+    Django version 4.2.16, using settings 'button_count.settings'
+    Starting development server at http://127.0.0.1:8000/
+    Quit the server with CONTROL-C.
+
+Command Click or Copy the http url and it should provide you an instance of the button app.
+
+Use Ctl-C to exit this instance.
