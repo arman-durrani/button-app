@@ -11,5 +11,17 @@ Start by setting up django on your Laptop. I recommend creating a miniconda envi
 
     source ~/miniconda3/bin/activate
 
-    Create a django miniconda environment
+Create a django miniconda environment
 
+    conda create -n django python=3.8
+
+Activate the virtual environment
+
+    conda activate django
+
+Install the right dependencies
+
+    pip install django
+
+
+ 
