@@ -23,5 +23,7 @@ Install the right dependencies
 
     pip install django
 
+Use the following command to run the server
 
+    python manage.py runserver
  
