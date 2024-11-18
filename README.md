@@ -1,6 +1,6 @@
 # button-app
 
-Practice Docker Containerization & Kube Hosting
+BASIC INSTRUCTIONS : 
 
 Start by setting up django on your Laptop. I recommend creating a miniconda environment.
 
@@ -41,3 +41,20 @@ It should give you an output like :
 Command Click or Copy the http url and it should provide you an instance of the button app.
 
 Use Ctl-C to exit this instance.
+
+
+DOCKER INSTRUCTIONS
+
+Use the dockerfile to create an image of this application with the following build command : 
+
+    docker build . -t {image-name}
+
+You now built an image with a desired name. In order to create and run a container, you must use the following command : 
+
+    docker run -p 8000:8000 {image-name}
+
+The -p flag replaces the django binding to your default IP and allows you to port map the container to your local environment.
+
+NOTE : Your dev server should be available at http://0.0.0.0:8000. If not, you have port issues and the server will never load. Adjust django settings as necessary and close any unnecessary ports to solve this issue.
+
+NOTE : If your localhost is continuously loading it means the port is already in use for some reason. Reset your ports and try again.
