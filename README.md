@@ -1,6 +1,6 @@
 # button-app
 
-***BASIC INSTRUCTIONS : ***
+__BASIC INSTRUCTIONS :__
 
 Start by setting up django on your Laptop. I recommend creating a miniconda environment.
 
@@ -43,7 +43,7 @@ Command Click or Copy the http url and it should provide you an instance of the 
 Use Ctl-C to exit this instance.
 
 
-**DOCKER INSTRUCTIONS : **
+__DOCKER INSTRUCTIONS :__
 
 Use the dockerfile to create an image of this application with the following build command : 
 
