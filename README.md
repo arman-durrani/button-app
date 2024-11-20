@@ -55,6 +55,6 @@ You now built an image with a desired name. In order to create and run a contain
 
 The -p flag replaces the django binding to your default IP and allows you to port map the container to your local environment.
 
-NOTE : Your dev server should be available at http://0.0.0.0:8000. If not, you have port issues and the server will never load. Adjust django settings as necessary and close any unnecessary ports to solve this issue.
+NOTE : Your dev server should be available at http://0.0.0.0:8000. If not, you have port issues and the server will never load. Adjust django settings / dockerfile as necessary and close any unnecessary ports to solve this issue.
 
-NOTE : If your localhost is continuously loading it means the port is already in use for some reason. Reset your ports and try again.
+NOTE : If your port forwarading is correct but the port is continuously loading, it may mean that the port is already in use for some reason. Reset your ports and try again.
