@@ -1,6 +1,6 @@
 # button-app
 
-**BASIC INSTRUCTIONS : **
+***BASIC INSTRUCTIONS : ***
 
 Start by setting up django on your Laptop. I recommend creating a miniconda environment.
 
