@@ -53,8 +53,6 @@ You now built an image with a desired name. In order to create and run a contain
 
     docker run -p 8000:8000 {image-name}
 
-The -p flag replaces the django binding to your default IP and allows you to port map the container to your local environment.
-
-NOTE : Your dev server should be available at http://0.0.0.0:8000. If not, you have port issues and the server will never load. Adjust django settings / dockerfile as necessary and close any unnecessary ports to solve this issue.
+The -p flag orchestrates port-mapping between a container and your virtual machine.
 
 NOTE : If your port forwarading is correct but the port is continuously loading, it may mean that the port is already in use for some reason. Reset your ports and try again.
