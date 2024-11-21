@@ -53,6 +53,6 @@ You now built an image with a desired name. In order to create and run a contain
 
     docker run -p 8000:8000 {image-name}
 
-The -p flag orchestrates port-mapping between a container and your virtual machine.
+The -p flag orchestrates port-mapping between a container and your virtual machine. I believe that the virtual machine's port 8000 is already mapped to your local machine's port 8000.
 
 NOTE : If your port forwarading is correct but the port is continuously loading, it may mean that the port is already in use for some reason. Reset your ports and try again.
