@@ -51,8 +51,6 @@ Use the dockerfile to create an image of this application with the following bui
 
 You now built an image with a desired name. In order to create and run a container, you must use the following command : 
 
-    docker run -p 8000:8000 {image-name}
+    docker run -p {host-port}:{container-port} {image-name}
 
-The -p flag orchestrates port-mapping between a container and your virtual machine. I believe that the virtual machine's port 8000 is already mapped to your local machine's port 8000.
-
-NOTE : If your port forwarading is correct but the port is continuously loading, it may mean that the port is already in use for some reason. Reset your ports and try again.
+The -p flag orchestrates port-mapping between a container and your virtual machine. In our case, the dockerfile has indicated that the container port is 8000. You can set the host port to any arbitrary port number and use 'curl localhost:{host-port}' to access the web app on your virtual machine. If you are on VS code you can also port map the vm's host port to your local machine to access it on an external browser. 
