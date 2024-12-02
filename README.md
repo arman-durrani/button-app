@@ -42,6 +42,22 @@ Command Click or Copy the http url and it should provide you an instance of the 
 
 Use Ctl-C to exit this instance.
 
+__CURL USAGE :__
+What if I want to access the button application purely from curl (perhaps I don't have port-forwarding set up).
+We can use CURL to make POST and GET requests from our application. In order to do so in a singular session, start by running : 
+
+    curl -X POST http://localhost:8000/button-click/ -H "Content-Type: application/json" -c cookies.txt -d "{}"
+
+This command creates a file cookies.txt which essentially contains session metadata that you can use in subsequent requests like the following : 
+
+    curl -X POST http://localhost:8000/button-click/     -H "Content-Type: application/json"     -b cookies.txt     -d "{}" -i
+    #This will increment the button-click counter again
+
+    curl -X GET http://localhost:8000/button-click/ -b cookies.txt
+    #This will return the current number of clicks in your session.
+
+NOTE : You must have launched the site with a python manage.py runserver command for curl commands to work.
+
 
 __DOCKER INSTRUCTIONS :__
 
@@ -54,3 +70,5 @@ You now built an image with a desired name. In order to create and run a contain
     docker run -p {host-port}:{container-port} {image-name}
 
 The -p flag orchestrates port-mapping between a container and your virtual machine. In our case, the dockerfile has indicated that the container port is 8000. You can set the host port to any arbitrary port number and use 'curl localhost:{host-port}' to access the web app on your virtual machine. If you are on VS code you can also port map the vm's host port to your local machine to access it on an external browser. 
+
+
